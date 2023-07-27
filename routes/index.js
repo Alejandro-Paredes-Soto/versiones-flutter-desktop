@@ -1,0 +1,23 @@
+const { Router } = require('express')
+const router = Router()
+const routerUser = require('./users.router')
+const routerResidential = require('./residential.router')
+const routerEncuestas = require('./encuestas.router')
+const routerConnection = require('./testconnection.router')
+const routerPdf = require('./pdf.router')
+const routerSocket = require('./eventosSocket.router')
+const routerTest = require('./test.router')
+const routerImg = require('./img.router')
+const routerExe = require('./repexe.router')
+
+router.use('/user', routerUser)
+router.use('/residential', routerResidential)
+router.use('/encuestas', routerEncuestas)
+router.use('/testconecction', routerConnection)
+router.use('/pdf', routerPdf)
+router.use('/socket', routerSocket)
+router.use('/test', routerTest)
+router.use('/img', routerImg)
+router.use('/versiones', routerExe)
+
+module.exports = router
